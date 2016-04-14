@@ -3,15 +3,15 @@
  *
  *       Filename:  malloc.c
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  04/10/2015 04:28:54 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  YOUR NAME (), 
- *   Organization:  
+ *         Author:  YOUR NAME ()
+ *   Organization:
  *
  * =====================================================================================
  */

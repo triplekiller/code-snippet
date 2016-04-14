@@ -3,15 +3,15 @@
  *
  *       Filename:  main.c
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  04/11/2015 11:31:07 AM
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  YOUR NAME (), 
- *   Organization:  
+ *         Author:  YOUR NAME ()
+ *   Organization:
  *
  * =====================================================================================
  */
@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 	env[0] = malloc(100 * sizeof(char));
 	sprintf(env[0], "LD_PRELOAD=./malloc.so");
 	env[1] = NULL;
-	 
+
 	execve(argv[1], argv + 1, env);
 	perror("exec() failed");
 
