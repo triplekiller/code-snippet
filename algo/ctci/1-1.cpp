@@ -3,15 +3,15 @@
  *
  *       Filename:  1-1.cpp
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  09/01/2015 10:18:57 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  YOUR NAME (), 
- *   Organization:  
+ *         Author:  YOUR NAME ()
+ *   Organization:
  *
  * =====================================================================================
  */

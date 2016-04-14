@@ -3,15 +3,15 @@
  *
  *       Filename:  squeue.cpp
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  04/08/2015 10:22:33 AM
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  YOUR NAME (), 
- *   Organization:  
+ *         Author:  YOUR NAME ()
+ *   Organization:
  *
  * =====================================================================================
  */
@@ -53,7 +53,7 @@ T SQueue<T>::dequeue()
 		s2.pop();
 		return top;
 	}
-	
+
 	while (!s1.empty()) {
 		top = s1.top();
 		s2.push(top);
@@ -68,7 +68,7 @@ T SQueue<T>::dequeue()
 int main()
 {
 	SQueue<int> sq;
-	
+
 	for (int i = 0; i < 10; i++) {
 		sq.enqueue(i);
 	}

@@ -3,15 +3,15 @@
  *
  *       Filename:  fuse.c
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  05/18/2015 04:51:41 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  YOUR NAME (), 
- *   Organization:  
+ *         Author:  YOUR NAME ()
+ *   Organization:
  *
  * =====================================================================================
  */

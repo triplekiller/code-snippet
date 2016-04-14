@@ -3,15 +3,15 @@
  *
  *       Filename:  cpu_ctrl.c
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  03/17/2015 09:31:04 AM
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  YOUR NAME (), 
- *   Organization:  
+ *         Author:  YOUR NAME ()
+ *   Organization:
  *
  * =====================================================================================
  */
