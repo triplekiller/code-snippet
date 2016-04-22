@@ -8,3 +8,5 @@ Module.symvers
 *.so
 *.mod.c
 *.order
+.tmp_versions
+*.cmd

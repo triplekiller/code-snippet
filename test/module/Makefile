@@ -13,4 +13,5 @@ default:
 	make -C $(KERNEL_DIR) M=$(PWD) modules
 
 clean:
-	rm -f *.o *.cmd *.ko *.mod.c *.tmp_versions module
+	rm -f *.o .*.cmd *.ko *.mod.c modules.order Module.symvers
+	rm -rf .tmp_versions
