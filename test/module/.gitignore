@@ -1,0 +1,10 @@
+modules.builtin
+Module.symvers
+*.o
+*.o.*
+*.ko
+*.s
+*.a
+*.so
+*.mod.c
+*.order
