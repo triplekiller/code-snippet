@@ -1,0 +1,20 @@
+digraph {
+  label = "Do things that complement each other";
+  subgraph {
+    rank=same
+    experimenting
+    programming
+  }
+  writing
+  presenting
+  programming -> writing  [label="new experience"]
+  experimenting -> writing [label="new experience"]
+  programming -> experimenting [label="automation"]
+  experimenting -> programming [label="improvements"]
+  writing -> presenting [label="content,\nopportunity"]
+  presenting -> writing [label="content"]
+  writing -> programming [label="reflection,\nideas"]
+  writing -> experimenting [label="reflection,\nideas"]
+  presenting -> experimenting [label="ideas"]
+  experimenting -> presenting [label="improvements"]
+}
