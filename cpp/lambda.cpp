@@ -3,15 +3,15 @@
  *
  *       Filename:  lamada.cpp
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  09/07/2015 02:44:52 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  YOUR NAME (), 
- *   Organization:  
+ *         Author:  YOUR NAME (),
+ *   Organization:
  *
  * =====================================================================================
  */
@@ -21,6 +21,9 @@
 #include <numeric>
 #include <algorithm>
 #include <string>
+
+//With "lambda," we use higher-order procedures. A lambda contains no statements.
+//It returns a single expression. This limitation leads to simpler logic.
 
 int main()
 {
