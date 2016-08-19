@@ -1,4 +1,5 @@
 // http://www.algorithmist.com/index.php/Longest_Increasing_Subsequence
+// LIS(i) = max{LIS(j)+1} (j<i and a[j]<a[i])
 
 #include <iostream>
 #include <vector>
