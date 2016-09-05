@@ -1,19 +1,19 @@
 /*
- * =====================================================================================
+ * ============================================================================
  *
  *       Filename:  vector.cpp
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  08/21/2015 10:05:44 AM
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  YOUR NAME (), 
- *   Organization:  
+ *         Author:  YOUR NAME ()
+ *   Organization:
  *
- * =====================================================================================
+ * ============================================================================
  */
 
 // vector/string: has capacity attribute
@@ -46,7 +46,7 @@ int main()
 	const char *str = "hello world";
 	int a[5] = {1, 3, 5, 7, 9};
 	vector<char> v(str, str + strlen(str));
-	vector<int> v2(a, a+5);
+	vector<int> v2(a, a + sizeof(a)/sizeof(a[0]));
 
 	vector<char>::iterator iter;
 	vector<int>::iterator iter2;
@@ -63,7 +63,6 @@ int main()
 
 	INTVEC vec;
 	vec.push_back(42);
-
 
 	// size: number of elements in the vector
 	// max_size: maximum number of elements vector can hold(implementation dependent)
