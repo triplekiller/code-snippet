@@ -1,23 +1,9 @@
-/*
- * =====================================================================================
- *
- *       Filename:  smart_ptr.cpp
- *
- *    Description:
- *
- *        Version:  1.0
- *        Created:  07/31/2015 04:33:40 PM
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME ()
- *   Organization:
- *
- * =====================================================================================
- */
-
 #include <iostream>
 #include <memory>
+#include <vector>
+#include <chrono>
+
+// g++ -std=c++11 smart_ptr.cpp
 
 using namespace std;
 
@@ -31,6 +17,18 @@ void func(int *p)
 {
 	cout << "*p=" << *p << endl;
 }
+
+void move_shared_ptr() {
+	std::vector<std::shared_ptr<int> > v(10000, std::shared_ptr<int>(new int(3)));
+	typedef std::chrono::high_resolution_clock Clock;
+	typedef Clock::time_point time_point;
+	typedef std::chrono::duration<double, std::micro> us;
+	time_point t0 = Clock::now();
+	v.erase(v.begin());
+	time_point t1 = Clock::now();
+	std::cout << us(t1-t0).count() << "\u00B5s\n";
+}
+
 
 int main()
 {
@@ -49,9 +47,25 @@ int main()
 	shared_ptr<foo> sp1(new foo);
 	sp1->print();
 	cout << "sp1 ptr: " << sp1.get() << endl;
+	cout << "sp1 use_count: " << sp1.use_count() << '\n';
 	shared_ptr<foo> sp2(sp1);
 	sp2->print();
 	cout << "sp2 ptr: " << sp2.get() << endl;
+	cout << "sp1 use_count: " << sp1.use_count() << '\n';
+//	cout << "sp2 use_count: " << sp2.use_count() << end;
+	cout << "sp2 use_count: " << sp2.use_count() << '\n';
+
+	/*
+	A std::unique_ptr can't be passed by value because it can't be copied, so it
+	is usually moved around with the special function std::move from the
+	Standard Library
+
+	Go with a simpler raw pointer (can be null) or a reference (can't be null)
+	when your function just needs to inspect the underlying object or do
+	something with it without messing with the smart pointer. Both
+	std::unique_ptr and std::shared_ptr have the get() member function that
+	returns the stored pointer
+	*/
 
 	// unique_ptr: copy ctor not exist but move ctor exist
 	cout << endl;
@@ -91,6 +105,9 @@ can be situations where memory leaks can occur because of that
 	p.reset(); // release the ownership of the managed object
 	if (wp.expired()) // check whether the referenced object was already deleted
 		cout << "expired" << endl;
+
+	cout << endl;
+	move_shared_ptr();
 
 	return 0;
 }

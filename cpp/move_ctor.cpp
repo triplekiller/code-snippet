@@ -1,27 +1,10 @@
-/*
- * ============================================================================
- *
- *       Filename:  move_ctor.cpp
- *
- *    Description:
- *
- *        Version:  1.0
- *        Created:  08/17/2015 08:16:50 PM
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME ()
- *   Organization:
- *
- * ============================================================================
- */
-
 // http://en.cppreference.com/w/cpp/language/move_constructor
 
 #include <iostream>
 #include <string>
 #include <iomanip>
 #include <sstream>
+#include <vector>
 
 using namespace std;
 
@@ -82,6 +65,19 @@ int main()
 	D d2 = move(d1);
 	cout << "After move, d1.s = " << d1.s << endl;
 	cout << "After move, d2.s = " << d2.s << endl;
+
+	cout << endl;
+
+	string str = "Hello";
+	std::vector<std::string> v;
+
+	v.push_back(str);
+	cout << "After copy, str is " << str << endl;
+
+	v.push_back(std::move(str));
+	cout << "After move, str is " << str << endl;
+
+	cout << "vector elements are: " << v[0] << " " << v[1] << endl;
 
 	return 0;
 }
