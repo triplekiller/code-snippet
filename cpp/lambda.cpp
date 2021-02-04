@@ -25,6 +25,16 @@
 //With "lambda," we use higher-order procedures. A lambda contains no statements.
 //It returns a single expression. This limitation leads to simpler logic.
 
+// lambdas are just function objects automatically created by the compiler.
+// a generic lambda is a function template. (Since C++14)
+
+
+// The difference of the usage of functions and lambda functions boils down to
+// two points.
+//
+// 1. You can not overload lambdas.
+// 2. A lambda function can capture local variables.
+
 int main()
 {
 	std::vector<int> vec(10);

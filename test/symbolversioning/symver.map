@@ -1,0 +1,5 @@
+MYSTUFF_1.1 {
+	  global:
+foo;
+	  local: *;
+	};
