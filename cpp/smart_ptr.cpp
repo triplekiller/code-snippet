@@ -8,6 +8,7 @@
 // g++ -std=c++11 smart_ptr.cpp
 
 // https://www.nextptr.com/tutorial/ta1358374985/shared_ptr-basics-and-internals-with-examples
+// https://embeddedartistry.com/blog/2017/01/04/c-smart-pointers/
 
 using namespace std;
 

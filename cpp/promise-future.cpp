@@ -16,6 +16,12 @@
 // A std::future object can be used with asych, std::packaged_task and
 // std::promise.
 
+// std::promise is also a class template and its object promises to set the value
+// in future. Each std::promise object has an associated std::future object that
+// will give the value once set by the std::promise object.
+
+// A std::promise object shares data with its associated std::future object.
+
 void product(std::promise<int>&& intPromise, int a, int b) {
   intPromise.set_value(a * b);
 }
